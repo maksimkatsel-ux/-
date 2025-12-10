@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вопросик</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #1e1e2f;
+        font-family: 'Comic Sans MS', sans-serif;
+        flex-direction: column;
+        color: #ff4b5c;
+    }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    button {
+        width: 150px;
+        padding: 15px;
+        margin: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .green { background-color: #63ff9a; color: black; }
+    .yellow { background-color: #ffda63; color: black; }
+    #answer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        color: #63ff9a;
+        text-align: center;
+        display: none; /* Скрыт пока не нажата кнопка */
+        background-color: rgba(30, 30, 47, 0.8);
+        padding: 20px 40px;
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Ты красивая?</h1>
+<button class="green" onclick="answer()">Да</button>
+<button class="yellow" onclick="answer()">Да</button>
+
+<div id="answer">Конечно! 😎</div>
+
+<script>
+function answer() {
+    document.getElementById("answer").style.display = "block"; // Показываем текст посередине
+}
+</script>
+
+</body>
+</html>
